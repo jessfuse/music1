@@ -1,8 +1,16 @@
 Onemusic::Application.routes.draw do
-  devise_for :users
+  
+  devise_for :users do
+    get "/", :to => "devise/sessions#new"
+  end
+
+  get '/' => "devise/sessions#new"
 
   resources :authentications
+
   match 'auth/:provider/callback' => 'authentications#create'
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
