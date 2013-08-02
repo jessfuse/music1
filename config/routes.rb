@@ -1,5 +1,11 @@
 Onemusic::Application.routes.draw do
   
+  resources :songs
+
+  # resources :users
+
+  root :to => 'songs#index'
+
   devise_for :users, path_names: {sign_in: "Login", sign_out: "Logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
   #   get "/", :to => "devise/sessions#new"

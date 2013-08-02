@@ -23,11 +23,13 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'omniauth'
+gem 'soundcloud'
 gem 'omniauth-soundcloud', '~> 1.0.0'
 gem "nifty-generators", :group => :development
 gem 'figaro'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'awesome_print'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -42,6 +44,6 @@ gem 'binding_of_caller'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
 
 gem "mocha", :group => :test
