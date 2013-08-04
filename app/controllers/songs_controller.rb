@@ -9,6 +9,10 @@ class SongsController < ApplicationController
     #fetch track to stream
     @track = @client.get('/users/52173235/tracks/103621673')
     
+    track_url = 'http://soundcloud.com/forss/flickermood'
+
+    @embed_info = @client.get('/oembed', :url => track_url)
+
     # #get the tracks streaming URL
     @stream_url = @track.stream_url
     # @songs = @stream_url.location
