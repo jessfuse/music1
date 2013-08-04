@@ -10,7 +10,7 @@ class SongsController < ApplicationController
     @track = @client.get('/users/52173235/tracks/103621673')
     
     # #get the tracks streaming URL
-    @stream_url = @track.stream_url.location
+    @stream_url = @track.stream_url
     # @songs = @stream_url.location
   # print the tracks stream URL
   # puts 
