@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,:omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :soundcloud_token 
-
+  has_and_belongs_to_many :playlists
   validates_presence_of :username 
   validates_uniqueness_of :username 
 
@@ -41,19 +41,4 @@ class User < ActiveRecord::Base
       super
     end
   end
-
-  def fetch_songs 
-    @client = Soundcloud.new(:access_token => self.soundcloud_token)
-
-      # '#{@user.soundcloud_token}')
-
-    # get playlist
-    playlists = @client.get('/playlists/405726')
-    playlists.tracks.each do |track|
-      puts track.uri
-      puts track.id 
-    end
-
-  end
-
 end

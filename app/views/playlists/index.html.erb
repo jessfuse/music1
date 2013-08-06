@@ -1,0 +1,35 @@
+<script src="//connect.soundcloud.com/sdk.js"></script>
+
+<h1>Listing playlists</h1>
+
+<table>
+  <tr>
+    <th>Playlist</th>
+    <th>Uid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @playlists.each do |playlist| %>
+  <tr>
+    <td><%= playlist.playlist_id %></td>
+    <td><%= playlist.uid %></td>
+    <td><%= link_to 'Show', playlist %></td>
+    <td><%= link_to 'Edit', edit_playlist_path(playlist) %></td>
+    <td><%= link_to 'Destroy', playlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<object height="81" width="100%" id="myPlayer" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+ 
+  <param name="movie" value="http://player.soundcloud.com/player.swf?url=<%= Playlist.return_url %>&enable_api=true&object_id=myPlayer" buying='true' download='true'></param>
+  <param name="allowscriptaccess" value="always"></param>
+  
+  <embed allowscriptaccess="always" height="81" src="http://player.soundcloud.com/player.swf?url=<%= Playlist.return_url%>&enable_api=true&object_id=myPlayer" type="application/x-shockwave-flash" width="100%" name="myPlayer"></embed>
+</object>
+
+<div id= "target"></div>
+
+<%= link_to 'New Playlist', new_playlist_path %>

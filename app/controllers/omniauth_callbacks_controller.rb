@@ -4,8 +4,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @user.persisted?
        flash.notice = "Signed in #{@user.username}"
        auth = request.env['omniauth.auth']
-       @soundcloud_token = auth['credentials']['token']
-       @user.soundcloud_token = @soundcloud_token
+       soundcloud_token = auth['credentials']['token']
+       @user.soundcloud_token = soundcloud_token
        @user.save 
       sign_in_and_redirect @user
     else
