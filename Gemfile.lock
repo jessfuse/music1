@@ -59,14 +59,12 @@ GEM
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
+    dotenv (0.8.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
-    figaro (0.7.0)
-      bundler (~> 1.0)
-      rails (>= 3, < 5)
     hashie (2.0.5)
     hike (1.2.3)
     httmultiparty (0.3.10)
@@ -184,7 +182,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
   devise
-  figaro
+  dotenv
   jquery-rails
   mocha
   nifty-generators

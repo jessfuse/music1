@@ -33,11 +33,11 @@ gem 'omniauth'
 gem 'soundcloud'
 gem 'omniauth-soundcloud', '~> 1.0.0'
 gem "nifty-generators", :group => :development
-gem 'figaro'
+# gem 'figaro'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'awesome_print'
-
+gem 'dotenv'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -11,13 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130805212154) do
+ActiveRecord::Schema.define(:version => 20130807010111) do
 
   create_table "playlists", :force => true do |t|
-    t.string   "playlist_id"
+    t.string   "soundcloud_id"
     t.string   "uid"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "user_id"
+  end
+
+  create_table "playlists_songs", :id => false, :force => true do |t|
+    t.integer "playlist_id"
+    t.integer "song_id"
   end
 
   create_table "songs", :force => true do |t|
@@ -26,8 +32,9 @@ ActiveRecord::Schema.define(:version => 20130805212154) do
     t.integer  "uid"
     t.string   "username"
     t.integer  "user_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "soundcloud_id"
   end
 
   create_table "users", :force => true do |t|

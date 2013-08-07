@@ -3,14 +3,9 @@ class PlaylistsController < ApplicationController
   # GET /playlists
   # GET /playlists.json
   def index
-    @playlists = Playlist.all
- 
-
-    @url = @path_connect
-    @fake_url = @path_connect
-
-
-    end
+    Playlist.import_for_user(current_user)
+    @playlists = current_user.playlists.all
+  end
 
   # GET /playlists/1
   # GET /playlists/1.json
