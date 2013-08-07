@@ -11,7 +11,9 @@
  *= require_self
  *= require_tree .
  */
-body { background-image: url(<%= asset_path 'deadweather.jpg' %>); }
+body { background-image: url(<%= asset_path 'deadweather.jpg' %>);
+  background-attachment: fixed;
+ }
 
 div, .pure-menu {
   height: 4em; 
@@ -39,33 +41,51 @@ a:hover {
   font-size: 1.75em; 
 }
 
-.page-title {
-  font-family: 'Faster One'; 
-  font-size: 3em; 
-  color: #FF7216;
+.sticktop {
   width: 100%;
-  margin-left: 15%;
-  height: 3em; 
+  margin: 0 auto; 
+  height: 5em; 
+  background-color: white; 
+  opacity: .5; 
+  position: fixed; 
 }
 
-.info {
-  width: 40%; 
-  height: 4.75em; 
+.landing-title {
+  zoom: 1;
+  margin-left: 15%; 
+  font-family: 'Faster One'; 
+  font-size: 5em; 
+  color: #FF7216;
+}
+
+.pure-u-1-3 {
+  display: inline-block;
+  color: #FF7216;
+  background-color: white; 
+  font-family: 'Racing Sans One'; 
+  line-height: 1.5em; 
+  font-size: 3em; 
+  clear: both;
+}
+
+/*.info {
+  width: 80%; 
+  height: 4em; 
   background-color: white; 
   opacity: .5; 
   color: black;
   font-family: 'Racing Sans One';
-  margin-left: 5%;
-  font-size: 2em;  
+  font-size: 2.5em;
+  margin-left: 10%; 
+  margin-bottom: 10%; 
   padding-top: 2%;
   line-height: 1.25em; 
   padding: .5em; 
   border-radius: 30px; 
-}
+  box-shadow: inset 10px 10px 10px 10px #FF7216;
+}*/
 
-#two {
-margin-left: 55%;
-}
+
 
 
 
