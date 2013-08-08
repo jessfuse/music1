@@ -7,7 +7,7 @@ Onemusic::Application.routes.draw do
 
   # resources :users
 
-  root :to => 'songs#landing'
+  root :to => 'static_pages#landing'
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
