@@ -7,6 +7,13 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 
+group :development, :test do 
+  gem 'rspec-rails', '~> 2.0'
+end
+
+group :production, :test do 
+  gem 'rspec-rails', '~> 2.0'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,10 +33,12 @@ gem 'omniauth'
 gem 'soundcloud'
 gem 'omniauth-soundcloud', '~> 1.0.0'
 gem "nifty-generators", :group => :development
-gem 'figaro'
+# gem 'figaro'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'awesome_print'
+
+gem 'dotenv'
 gem 'pure-css-rails'
 
 # To use ActiveModel has_secure_password
