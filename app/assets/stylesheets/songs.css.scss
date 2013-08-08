@@ -33,23 +33,15 @@
 clear: both; 
 }*/
 
-.one {
-  margin-left: 0; 
-  width: 40%; 
-  float: left; 
-  clear: both; 
-  zoom: 1;
-  margin-left: 5%;
-}
 
-.listen-info {
+.pure-u-1-5 {
   color: #FF7216;
   background-color: white; 
   line-height: 1.5em; 
   margin-top: 2%;
   border-radius: 10px;
   font-size: 3em;
-  width: 45%;
+  width: 40%;
   margin-bottom: 2%; 
   display: block; 
   height: 4em; 
@@ -70,35 +62,15 @@ p {
   width: 1em;
   height: 1em;  
   margin-left: 5%; 
-  margin-bottom: 0;  
+  margin-bottom: 3%; 
 }
 
-.two {
+.wrapper-listen {
   width: 40%; 
-  float: right; 
+  float: left; 
   clear: both; 
-  zoom: 1;
-  margin-right: 0%;
-}
-
-.pure-u-1-5 {
-  color: #FF7216;
-  background-color: white; 
-  line-height: 1.5em; 
-  margin-top: 2%;
-  border-radius: 10px;
-  font-size: 3em;
-  width: 45%;
-  margin-bottom: 2%; 
-  display: block; 
-  height: 4em; 
-}
-
-p {
-  font-family: 'Racing Sans One';
-  font-size: .75em; 
-  line-height: 1em; 
-  text-align: center; 
+  margin-left: 5%;
+  display: inline-block;
 }
 
 .header-two {
@@ -109,9 +81,15 @@ p {
   width: 1em;
   height: 1em;  
   margin-right: 5%; 
-  margin-bottom: 0;  
+  margin-bottom: 3%;  
 }
 
-
+.wrapper-promote {
+  width: 40%; 
+  float: right; 
+  clear: both; 
+  margin-right: 5%;
+  display: inline-block;
+}
 
 
