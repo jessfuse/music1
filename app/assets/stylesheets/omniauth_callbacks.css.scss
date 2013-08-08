@@ -1,3 +1,25 @@
 // Place all the styles related to the omniauth_callbacks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+  color: #FF7216; 
+  font-size: 3em; 
+  font-family: 'Racing Sans One'; 
+  margin-left: 40%; 
+}
+
+div, .field {
+  color: white; 
+/*  margin-left: 40%; 
+*/}
+
+.pure-menu {
+  margin-left: 0;
+}
+
+a {
+  color: white; 
+
+}
+
