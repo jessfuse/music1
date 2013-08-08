@@ -12,16 +12,73 @@
 
 .landing-title {
   zoom: 1.50;
-  margin-left: 10%; 
+  margin-left: 5%; 
   font-family: 'Faster One'; 
   font-size: 4.5em; 
   color: #FF7216;
   text-align: center; 
+  margin-top: 6%; 
 }
 
-.pure-g-r {
+/*.logo {
+  font-size: 15em; 
+  font-family: 'Faster One'; 
+  margin-left: 40%;
+  color: white; 
+  margin-top: 15%;
+  width: 25%;
+}
+
+.main-wrapper {
+clear: both; 
+}*/
+
+.one {
   margin-left: 0; 
   width: 40%; 
+  float: left; 
+  clear: both; 
+  zoom: 1;
+  margin-left: 5%;
+}
+
+.listen-info {
+  color: #FF7216;
+  background-color: white; 
+  line-height: 1.5em; 
+  margin-top: 2%;
+  border-radius: 10px;
+  font-size: 3em;
+  width: 45%;
+  margin-bottom: 2%; 
+  display: block; 
+  height: 4em; 
+}
+
+p {
+  font-family: 'Racing Sans One';
+  font-size: .75em; 
+  line-height: 1em; 
+  text-align: center; 
+}
+
+.header-one {
+  color: #FF7216;
+  font-size: 3em; 
+  font-family: 'Racing Sans One'; 
+  margin-top: 6%; 
+  width: 1em;
+  height: 1em;  
+  margin-left: 5%; 
+  margin-bottom: 0;  
+}
+
+.two {
+  width: 40%; 
+  float: right; 
+  clear: both; 
+  zoom: 1;
+  margin-right: 0%;
 }
 
 .pure-u-1-5 {
@@ -34,7 +91,6 @@
   width: 45%;
   margin-bottom: 2%; 
   display: block; 
-  margin-left: 5%;
   height: 4em; 
 }
 
@@ -45,14 +101,15 @@ p {
   text-align: center; 
 }
 
-.header {
+.header-two {
   color: #FF7216;
   font-size: 3em; 
   font-family: 'Racing Sans One'; 
-  margin-top: 8%; 
+  margin-top: 6%; 
   width: 1em;
   height: 1em;  
-  margin-left: 6%; 
+  margin-right: 5%; 
+  margin-bottom: 0;  
 }
 
 
