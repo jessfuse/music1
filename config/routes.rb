@@ -2,7 +2,7 @@ Onemusic::Application.routes.draw do
   
   resources :playlists
 
-
+  resources :charges
   resources :songs
 
   # resources :users

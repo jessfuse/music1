@@ -1,0 +1,42 @@
+<%= form_tag charges_path do %>
+  <article>
+    <label class="amount">
+      <span>Amount: $5.00</span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+
+  <%= current_user.username %>
+
+  <form>
+	<input type='text' id='stripeDollars' /> 
+  <button type='submit' id="customButton">Purchase</button>
+  </form>
+
+  <script>
+    $('#customButton').click(function(){
+      var token = function(res){
+        var $input = $('<input type="hidden" name=stripeToken />').val(res.id);
+        $('form').append($input).submit();
+      };
+      var money = $('#stripeDollars').val() * 100;
+      console.log(money);
+      	
+      StripeCheckout.open({
+        key:        "<%= Rails.configuration.stripe[:stripe_publishable_key] %>",
+        address:     true,
+        amount:      money,
+        currency:    'usd',
+        panelLabel:  'Checkout',
+        token:       token
+      });
+      return false;
+    });
+  </script>
+
+
+
+
+
+<% end %>

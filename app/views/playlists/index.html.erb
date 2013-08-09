@@ -1,4 +1,5 @@
 <script src="//connect.soundcloud.com/sdk.js"></script>
+<script src="https://checkout.stripe.com/v2/checkout.js"></script>
 
 <h1>Listing playlists</h1>
 
@@ -15,6 +16,32 @@
   </div>
 <% end %>
 
-<div id= "target"></div>
-
 <%= link_to 'New Playlist', new_playlist_path %>
+
+  <%= current_user.username %>
+
+  <form>
+	<input type='text' id='stripeDollars' /> 
+  <button type='submit' id="customButton">Help Fund!</button>
+  </form>
+
+  <script>
+    $('#customButton').click(function(){
+      var token = function(res){
+        var $input = $('<input type="hidden" name=stripeToken />').val(res.id);
+        $('form').append($input).submit();
+      };
+      var money = $('#stripeDollars').val() * 100;
+      console.log(money);
+      	
+      StripeCheckout.open({
+        key:        "<%= Rails.configuration.stripe[:stripe_publishable_key] %>",
+        address:     true,
+        amount:      money,
+        currency:    'usd',
+        panelLabel:  'Checkout',
+        token:       token
+      });
+      return false;
+    });
+  </script>
