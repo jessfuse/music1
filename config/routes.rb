@@ -1,5 +1,8 @@
 Onemusic::Application.routes.draw do
   
+  resources :artists
+
+
   resources :playlists
 
   resources :charges

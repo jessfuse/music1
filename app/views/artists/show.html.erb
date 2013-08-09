@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fund sender:</b>
+  <%= @artist.fund_sender_id %>
+</p>
+
+<p>
+  <b>Fund receiver:</b>
+  <%= @artist.fund_receiver_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %>
